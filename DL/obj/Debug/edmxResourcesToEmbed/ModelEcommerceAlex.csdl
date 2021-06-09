@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EcommerceAlexModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="IdCategoria" />
+    </Key>
+    <Property Name="IdCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SubCategorias" Relationship="Self.FK__SubCatego__IdCat__06CD04F7" FromRole="Categoria" ToRole="SubCategoria" />
+  </EntityType>
+  <EntityType Name="SubCategoria">
+    <Key>
+      <PropertyRef Name="IdSubCategoria" />
+    </Key>
+    <Property Name="IdSubCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdCategoria" Type="Int32" />
+    <NavigationProperty Name="Categoria" Relationship="Self.FK__SubCatego__IdCat__06CD04F7" FromRole="SubCategoria" ToRole="Categoria" />
+  </EntityType>
+  <Association Name="FK__SubCatego__IdCat__06CD04F7">
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="0..1" />
+    <End Role="SubCategoria" Type="Self.SubCategoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="IdCategoria" />
+      </Principal>
+      <Dependent Role="SubCategoria">
+        <PropertyRef Name="IdCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EcommerceAlexEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categorias" EntityType="Self.Categoria" />
+    <EntitySet Name="SubCategorias" EntityType="Self.SubCategoria" />
+    <AssociationSet Name="FK__SubCatego__IdCat__06CD04F7" Association="Self.FK__SubCatego__IdCat__06CD04F7">
+      <End Role="Categoria" EntitySet="Categorias" />
+      <End Role="SubCategoria" EntitySet="SubCategorias" />
+    </AssociationSet>
+    <FunctionImport Name="SubCategoriaGetById" ReturnType="Collection(EcommerceAlexModel.SubCategoriaGetById_Result)">
+      <Parameter Name="IdSubCategoria" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="SubCategoriaGetById_Result">
+    <Property Type="Int32" Name="IdSubCategoria" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="500" />
+    <Property Type="Int32" Name="IdCategoria" Nullable="true" />
+  </ComplexType>
+</Schema>

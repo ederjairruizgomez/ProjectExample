@@ -1,0 +1,10 @@
+C:\Users\Alien4\Documents\Alejandro Zambrano Pardo\CRUDJavaScript\ML\bin\Debug\ML.dll
+C:\Users\Alien4\Documents\Alejandro Zambrano Pardo\CRUDJavaScript\ML\bin\Debug\ML.pdb
+C:\Users\Alien4\Documents\Alejandro Zambrano Pardo\CRUDJavaScript\ML\obj\Debug\ML.csprojResolveAssemblyReference.cache
+C:\Users\Alien4\Documents\Alejandro Zambrano Pardo\CRUDJavaScript\ML\obj\Debug\ML.dll
+C:\Users\Alien4\Documents\Alejandro Zambrano Pardo\CRUDJavaScript\ML\obj\Debug\ML.pdb
+\\ALIEN3\formatos\1.- ENTRENAMIENTO\Jesús Torres\CRUDJSAlex\CRUDJavaScript\ML\bin\Debug\ML.dll
+\\ALIEN3\formatos\1.- ENTRENAMIENTO\Jesús Torres\CRUDJSAlex\CRUDJavaScript\ML\bin\Debug\ML.pdb
+\\ALIEN3\formatos\1.- ENTRENAMIENTO\Jesús Torres\CRUDJSAlex\CRUDJavaScript\ML\obj\Debug\ML.csprojResolveAssemblyReference.cache
+\\ALIEN3\formatos\1.- ENTRENAMIENTO\Jesús Torres\CRUDJSAlex\CRUDJavaScript\ML\obj\Debug\ML.dll
+\\ALIEN3\formatos\1.- ENTRENAMIENTO\Jesús Torres\CRUDJSAlex\CRUDJavaScript\ML\obj\Debug\ML.pdb
